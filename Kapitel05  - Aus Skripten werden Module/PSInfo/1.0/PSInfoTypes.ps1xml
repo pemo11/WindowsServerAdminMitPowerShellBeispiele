@@ -1,0 +1,13 @@
+<Types>
+    <Type>
+        <Name>PSInfoLib.OSInfo</Name>
+        <Members>
+            <ScriptProperty>
+                <Name>LetzterBootZeitpunkt</Name>
+                <GetScriptBlock>
+                 ([WMI]"").ConvertToDateTime($this.ZeitpunktLetztesBooten)
+                </GetScriptBlock>
+            </ScriptProperty>
+        </Members>
+    </Type>
+</Types>
