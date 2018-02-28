@@ -2,9 +2,14 @@
 
 Die Sammlung ist leider noch nicht vollständig, da ich alle Beispiele noch einmal überarbeiten möchte.
 
-Insgesamt bin ich  mit der Qualität der Beispiele bislang sehr zufrieden. Vor allem durch die Kommentare lernt noch man ein paar Details hinzu. Vor das Modulbeispiel (PsInfo) in Kapitel 5 zeigt sehr schön wie man es richtig macht.
+Insgesamt bin ich  mit der Qualität der Beispiele bislang sehr zufrieden.
 
-Die ganze Sammlung wird in den nächsten Tagen (relativ zum 24.2.2018) vollständig sein
+Durch die Kommentare lernt noch man ein paar Details hinzu.
+
+Das Modulbeispiel (PsInfo) in Kapitel 5 zeigt anschaulich wie man ein Modul richtig erstellt. Und es kommen fast alle möglichen Mitspieler vor. Inklusive einer Typen- und 
+einer Formatdefinitionsdatei.
+
+Es ist doch deutlich mehr Arbeit als ich dachte. Die ganze Sammlung wird in den nächsten Tagen (relativ zum 24.2.2018) vollständig sein.
 
 Bei Fragen zu einzelnen oder fehlenden Beispielen bitte einfach eine Mail an pm@activetraining.de
 
