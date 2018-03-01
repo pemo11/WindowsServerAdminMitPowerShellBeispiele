@@ -1,6 +1,8 @@
 <#
   .Synopsis
   Schließen eines Fensters über PostMessage und WM_CLOSE
+  .Description
+  Win32 ist der Name der Funktionssammlung, die das Betriebssystem enthält
   .Notes
   Wichtig: Bei FindWindow muss der erste Parameter vom Typ IntPtr sein
   und es muss [IntPtr]::Zero übergeben werden

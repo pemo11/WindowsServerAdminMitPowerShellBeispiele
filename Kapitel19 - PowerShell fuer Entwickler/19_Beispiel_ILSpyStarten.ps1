@@ -1,6 +1,11 @@
 <#
 .Synopsis
  Zeigt eine Assembly im ILSpy an
+ .Description
+ IL Spy ist ein Open Source-Tool, das den Inhalt einer Assemblydatei, d.h. ihre Typen
+ und deren Members anzeigt und die Befehle eines Methodenmembers auch
+ .Notes
+ Setzt voraus, dass ILSpy bereits installiert wurde
 #>
 function Show-ILSpy
 {

@@ -1,6 +1,8 @@
 <#
  .Synopsis
  Eventhandler mit Event-Variable
+ .Description
+ Dieses Mal mit etwas mehr Aufwand
 #> 
 
 $Anzahl = 0

@@ -1,6 +1,8 @@
 <#
  .Synopsis
  Der "richtige" Umgang mit einem Timer-Event
+ .Description
+ Das Timer-Event Elpased gibt alle 5s die Uhrzeit aus
 #>
  
 $SBTimer = {

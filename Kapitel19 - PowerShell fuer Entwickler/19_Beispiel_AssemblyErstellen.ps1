@@ -1,6 +1,8 @@
 <#
 .Synopsis
 Assembly-Bibliothek anlegen
+.Description
+Eine Assembly-Bibliothek als Dll-Datei per Add-Type-Cmdlet anlegen
 #> 
 
 $CSCode = @'
@@ -35,5 +37,6 @@ Add-Type -TypeDefinition $CSCode -OutputType Library -OutputAssembly PsInfoLib.d
 
 # Assembly-Datei erneut laden
 Add-Type -Path .\PsInfoLib.dll
+
 # Typ aus der Assemblydatei verwenden
 [PoshBuch.PsSystem]::GetPsInfo()

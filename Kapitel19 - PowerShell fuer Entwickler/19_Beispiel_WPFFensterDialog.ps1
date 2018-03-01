@@ -1,13 +1,20 @@
 <#
   .Synopsis
   Template für ein WPF-Fenster
+  .Description
+  Es wird ein Fenster mit einem Label, einer Textbox für die Eingabe und einem Button
+  für die Bestätigung
+  .Notes
+  Die Alternative ist anstelle von WPF WinForms zu verwenden
 #>
 
+# Variablen legen den Namen der App und die Beschriftung der Dialogelemente fest
 $AppName = "WPFApp"
 $WindowTitle = "WPF-App"
 $Label1Content = "Label1"
 $Button1Content = "OK"
 
+# Die XAML-Definition für das Fenster
 $WindowXaml = @"
 <Window
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -33,6 +40,7 @@ $WindowXaml = @"
         Width="400"
         Margin="4,12,0,0"
     />
+
     <TextBox
         x:Name="TextBox1"
         Background = "Cyan"
@@ -43,6 +51,7 @@ $WindowXaml = @"
         Width = "400"
         Margin = "4,12,0,0"
         />
+
     <Button
         x:Name="Button1"
         Content="$Button1Content"

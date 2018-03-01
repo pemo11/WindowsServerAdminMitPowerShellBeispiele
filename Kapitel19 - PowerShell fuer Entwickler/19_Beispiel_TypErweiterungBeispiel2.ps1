@@ -1,6 +1,9 @@
 <#
  .Synopsis
  Typ-Erweiterung mit einem CustomObject
+ .Description
+ Keine echte Typ-Erweiterung, da an den PowerShell-Typ PSCustomObject für die Dauer
+ der Ausgabe eine Eigenschaft mit dem Namen P2 angehängt wird
 #>
 
 $obj = [PsCustomObject]@{P1=100}

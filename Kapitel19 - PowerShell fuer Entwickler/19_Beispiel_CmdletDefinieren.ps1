@@ -1,5 +1,7 @@
 <#
  .Synopsis
+ Cmdlet definieren
+ .Description
  Anlegen eines Cmdlets mit dem Namen Get-PoshQuote mit C# und dem Add-Type-Cmdlet
 #>
 
