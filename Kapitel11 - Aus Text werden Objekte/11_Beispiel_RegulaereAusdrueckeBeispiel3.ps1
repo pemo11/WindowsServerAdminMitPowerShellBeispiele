@@ -1,6 +1,6 @@
 <#
  .Synopsis
-Beispiel Nr. 3 für das Zerlegen von Namen mit Hilfe eines regulären Ausdrucks
+Beispiel Nr. 3 - Zerlegen von Texten mit regulären Ausdrücken und dem [Regex]-Typenalias
 #>
 
 $ServerNamen = "
@@ -19,6 +19,6 @@ $ServerNamen = $ServerNamen -replace "`r",""
 
 $Muster = "^([a-z]+)[-[/_]*([a-z0-9]+)$"
 
-# Die RegeExOptions Multiline und IgnoreCase müssen gesetzt werden
+# Die RegExOptions Multiline und IgnoreCase müssen gesetzt werden
 [Regex]::Matches($ServerNamen, $Muster, "Multiline,IgnoreCase") | 
  Select-Object @{n="Name";e={$_.Groups[1]}}, @{n="ID";e={$_.Groups[2]}}

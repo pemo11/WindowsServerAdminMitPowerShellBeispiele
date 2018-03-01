@@ -1,6 +1,6 @@
 <#
  .Synopsis
- Beispiel Nr. 2 für das Zerlegen von Namen mit Hilfe eines regulären Ausdrucks
+Beispiel Nr. 2 - Zerlegen von Texten mit regulären Ausdrücken und dem Select-String-Cmdlet
 #>
 
 $ServerNamen = "

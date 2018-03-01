@@ -1,6 +1,6 @@
 <#
  .Synopsis
-Beispiel Nr. 1 für das Zerlegen von Namen mit Hilfe eines regulären Ausdrucks
+Beispiel Nr. 1  - Zerlegen von Texten mit regulären Ausdrücken und dem match-Operator
 #>
 
 $ServerNamen = "
