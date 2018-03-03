@@ -18,7 +18,7 @@ $TenantId = $AzureProfile.$TenantId
 
 # Anlegen einer Ressourcengruppe
 
-$ResourceGroupName = "Pemo2018"
+$ResourceGroupName = "posh2018"
 if (-not (Find-AzureRmResourceGroup -Tag @{ Name = $ResourceGroupName }))
 {
     # Ressourcengruppe anlegen - bei Location kommt es auf die Schreibweise an
