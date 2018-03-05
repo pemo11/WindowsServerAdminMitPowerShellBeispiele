@@ -44,4 +44,4 @@ $ConfigData = @{
   )
 }
 
-CredentialsBeispiel2
+CredentialsBeispiel2 -ConfigurationData $ConfigData

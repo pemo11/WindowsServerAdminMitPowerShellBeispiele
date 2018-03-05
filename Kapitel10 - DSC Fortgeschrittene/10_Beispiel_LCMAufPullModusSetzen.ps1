@@ -3,6 +3,16 @@
  Einen LCM für den Pull-Betrieb konfigurieren
 #>
 
+$ConfigData = @{
+    AllNodes = @(
+        @{
+            Nodename = "localhost"
+            ServerUrl = "https://PMServer:8088/PSDSCPullServer.svc"
+            RegistrationKey = "a017fb5b-1808-48f3-acc4-17e6a72138c1"
+        }
+    )
+}
+
 [DSCLocalConfigurationManager()]
 configuration LCMSetup
 {
@@ -18,17 +28,17 @@ configuration LCMSetup
 
       ConfigurationRepositoryWeb PullServer1
       {
-          ServerURL = "https://PMServer:8088/PSDSCPullServer.svc"
-          RegistrationKey = "a017fb5b-1808-48f3-acc4-17e6a72138c1"
+          ServerURL = $Node.ServerURL
+          RegistrationKey = $Node.RegistrationKey
           ConfigurationNames = @("StandardConfig")
       }
 
       ReportServerWeb ReportServer1
       {
-        ServerURL = "https://PMServer:8088/PSDSCPullServer.svc"
-        RegistrationKey = "a017fb5b-1808-48f3-acc4-17e6a72138c1"
+        ServerURL = $Node.ServerURL
+        RegistrationKey = $Node.RegistrationKey
       }
     }
 }
 
-LCMSetup
+LCMSetup -ConfigurationData $ConfigData

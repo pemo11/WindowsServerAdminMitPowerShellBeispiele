@@ -38,7 +38,7 @@ configuration SetupDSCPullserver1
         UseSecurityBestPractices = $false
       }
 
-      File RegistrationKeyFile
+      file RegistrationKeyFile
       {
         Ensure = "Present"
         Type = "File"

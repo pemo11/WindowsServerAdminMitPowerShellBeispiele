@@ -7,7 +7,7 @@ configuration ConfigdatenBeispiel1
 {
   Import-DSCResource -ModuleName PSDesiredStateConfiguration
 
-  Node $AllNodes.NodeName
+  node $AllNodes.NodeName
   {
     Log ConfigTest
     {
@@ -31,4 +31,13 @@ configuration ConfigdatenBeispiel1
   }
 }
 
+$ConfigData = @{
+  AllNodes = @(
+    @{
+      NodeName = "localhost"
+      Verzpfad = "C:\HalloDSC"
+      DateiName = "DSC01.txt"
+    }
+  )
+}
 ConfigdatenBeispiel1 -ConfigurationData $ConfigData
