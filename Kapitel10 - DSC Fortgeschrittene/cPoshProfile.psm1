@@ -67,6 +67,7 @@ class cPoshProfileResource
         }
         else {
             $this.CreationTime = $null
+            $this.Username = ""
             $this.Ensure = "Absent"
         }
         return $this

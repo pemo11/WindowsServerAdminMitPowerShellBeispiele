@@ -2,7 +2,7 @@
  .Synopsis
  Zip-Datei auspacken der DSC
  .Notes
- Muss mit Administratorberechtigungen ausgeführt werden
+ Muss mit Administratorberechtigungen ausgefï¿½hrt werden
 #>
 
 configuration ArchiveRessourceBeispiel
@@ -22,10 +22,10 @@ configuration ArchiveRessourceBeispiel
     # Per Script-Ressource Zip-Datei herunterladen
     Script DownloadZip
     {
-      # muss $false zurückgegeben, damit die SetScript-Aktion ausgeführt wird
+      # muss $false zurueckgegeben, damit die SetScript-Aktion bei Ensure=Present ausgefuerhrt wird
       TestScript = { (Test-Path -Path $using:Node.ZipPath) } 
 
-      # Reiner Formalismus. Der Rückgabewert muss eine Hashtable mit einem Result-Schlüssel sein
+      # Reiner Formalismus - der Rueckgabewert muss eine Hashtable mit einem Result-Schluessel sein
       GetScript = {
         @{Result = ""}
       }

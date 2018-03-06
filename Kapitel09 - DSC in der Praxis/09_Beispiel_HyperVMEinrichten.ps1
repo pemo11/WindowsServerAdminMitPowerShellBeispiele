@@ -1,6 +1,8 @@
 <#
  .Synopsis
  Hyper VM per DSC anlegen
+ .Notes
+ Pfad für Vhd-Datei anpassen
 #>
 
 configuration HyperVSetupVM

@@ -11,12 +11,12 @@ configuration FeatureBeispiel
 
   node $AllNodes.Nodename
   {
-    WindowsFeature Feature1
-    {
-      Ensure = "Present"
-      Name = $Node.FeatureName
-      LogPath = $Node.FeatureLogPath
-    }
+      WindowsFeature Feature1
+      {
+        Ensure = "Present"
+        Name = $Node.FeatureName
+        LogPath = $Node.FeatureLogPath
+      }
   }
 }
 
