@@ -15,12 +15,12 @@ configuration HyperVSetupVM
         xVMHyperV DSCServerVm
         {
             Ensure = "Present"
-            Name = "DSCServer"
+            Name = $Node.VMName
             Generation = 1
-            StartupMemory = 1024MB
+            StartupMemory = $Node.StartupMemory
             EnableGuestService = $true
-            ProcessorCount = 2
-            SwitchName = "ExternesNetzwerk"
+            ProcessorCount = $Node.ProcessorCount
+            SwitchName = $Node.SwitchName
             VhdPath = $Node.VhdPath
             State = "Running"
         }
@@ -32,6 +32,10 @@ $ConfigData = @{
     AllNodes = @(
         @{
             NodeName = "localhost"
+            VMName = "DSCServer"
+            StartupMemory = 1024MB
+            ProcessorCount = 2
+            SwitchName = "ExternesNetzwerk"
             VhdPath = "E:\HyperV\Virtual Hard Disks\WindowsServer2012R2.vhdx"
             VhdSize = 64GB
         }

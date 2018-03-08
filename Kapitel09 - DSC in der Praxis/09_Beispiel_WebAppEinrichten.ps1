@@ -31,9 +31,11 @@ configuration InstallxWebAdministration
     }
 }
 
+# Mof-Datei erzeugen
 InstallxWebAdministration -Computername Localhost
 
-# Start-DSCConfiguration -Path .\InstallxWebAdministration -Wait -Verbose -Force
+# Konfiguration ausführen
+Start-DSCConfiguration -Path .\InstallxWebAdministration -Wait -Verbose -Force
 
 # Richtet die Website mit WebApp ein
 configuration PoshWebAppSetup

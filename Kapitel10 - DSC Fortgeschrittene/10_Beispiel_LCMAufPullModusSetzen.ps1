@@ -7,8 +7,9 @@ $ConfigData = @{
     AllNodes = @(
         @{
             Nodename = "localhost"
-            ServerUrl = "https://PMServer:8088/PSDSCPullServer.svc"
-            RegistrationKey = "a017fb5b-1808-48f3-acc4-17e6a72138c1"
+            ServerUrl = "https://W2016A:8082/PSDSCPullServer.svc"
+            # Wird für die Authentifizierung verwendet
+            RegistrationKey = "9395af01-f2bb-41f0-90b3-fc3845c7525a"
         }
     )
 }
@@ -18,26 +19,28 @@ configuration LCMSetup
 {
     node localhost
     {
-      Settings
-      {
-          RefreshMode = "Pull"
-          # Konfigurationsdrift vermeiden
-          ConfigurationMode = "ApplyAndAutoCorrect"
-          AllowModuleOverwrite = $true
-      }
+        Settings
+        { 
+            RefreshMode = "pull"
+            # Konfigurationsdrift vermeiden
+            ConfigurationMode = "ApplyAndAutoCorrect"
+            AllowModuleOverwrite = $true
+        }
 
-      ConfigurationRepositoryWeb PullServer1
-      {
-          ServerURL = $Node.ServerURL
-          RegistrationKey = $Node.RegistrationKey
-          ConfigurationNames = @("StandardConfig")
-      }
+        ConfigurationRepositoryWeb PullServer1
+        {
+            ServerURL = $Node.ServerURL
+            RegistrationKey = $Node.RegistrationKey
+            ConfigurationNames = @("BasicConfig")
+            AllowUnsecureConnection = $true
+        }
 
-      ReportServerWeb ReportServer1
-      {
-        ServerURL = $Node.ServerURL
-        RegistrationKey = $Node.RegistrationKey
-      }
+        ReportServerWeb ReportServer1
+        {
+            ServerURL = $Node.ServerURL
+            RegistrationKey = $Node.RegistrationKey
+            AllowUnsecureConnection = $true
+        }
     }
 }
 
