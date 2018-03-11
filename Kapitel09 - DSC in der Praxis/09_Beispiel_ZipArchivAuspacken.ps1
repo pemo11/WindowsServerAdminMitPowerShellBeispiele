@@ -1,8 +1,8 @@
 <#
  .Synopsis
- Zip-Datei auspacken der DSC
+ Zip-Datei auspacken mit der Archiv-Ressource
  .Notes
- Muss mit Administratorberechtigungen ausgef�hrt werden
+ Muss mit Administratorberechtigungen ausgefuehrt werden
 #>
 
 configuration ArchiveRessourceBeispiel

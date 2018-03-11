@@ -1,0 +1,13 @@
+body {
+    font-family: verdana;
+}
+
+div.Header1 {
+    font-size: 24pt;
+    margin-bottom: 32px;
+}
+
+div.Header2 {
+    font-size: 20t;
+    margin-bottom: 24px;
+}
